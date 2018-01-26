@@ -1,12 +1,16 @@
-<h1>Listing workers</h1>
+<%= link_to "Strona główna", root_path %>
+<%= link_to "O twórcy", about_path %>
+<%= link_to "Pracownicy", workers_path %>
+
+<h1>Lista pracowników</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Surname</th>
+      <th>Imie</th>
+      <th>Nazwisko</th>
       <th>Email</th>
-      <th>Birthdate</th>
+      <th>Data urodzenia</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +22,9 @@
         <td><%= worker.surname %></td>
         <td><%= worker.email %></td>
         <td><%= worker.birthdate %></td>
-        <td><%= link_to 'Show', worker %></td>
-        <td><%= link_to 'Edit', edit_worker_path(worker) %></td>
-        <td><%= link_to 'Destroy', worker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaz', worker %></td>
+        <td><%= link_to 'Edytuj', edit_worker_path(worker) %></td>
+        <td><%= link_to 'Usun', worker, method: :delete, data: { confirm: 'Czy napewno?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Worker', new_worker_path %>
+<%= link_to 'Nowy pracownik', new_worker_path %>
